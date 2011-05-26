@@ -16,3 +16,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with django-testproject.  If not, see <http://www.gnu.org/licenses/>.
 
+"""
+Universal project for running unit tests of Django applications
+"""
+
+__version__ = (0, 1, 0, "dev", 0)

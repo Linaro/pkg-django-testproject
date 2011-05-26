@@ -19,9 +19,19 @@
 
 from setuptools import setup
 
+try:
+    import versiontools
+except ImportError:
+    print "This package requires python-versiontools to be configured"
+    print "See: http://packages.python.org/versiontools/installation.html"
+    raise
+
+import django_testproject
+
+
 setup(
     name='django-testproject',
-    version="0.1",
+    version=versiontools.format_version(django_testproject.__version__),
     author="Zygmunt Krynicki",
     author_email="zygmunt.krynicki@linaro.org",
     description="Universal project for running unit tests of Django applications",
@@ -45,6 +55,9 @@ setup(
     ],
     install_requires=[
         'django >= 1.0',
+    ],
+    setup_requires = [
+        'versiontools >= 1.1',
     ],
     include_package_data=True,
 )
