@@ -1,9 +1,29 @@
+# Copyright (C) 2010, 2011 Linaro Limited
+#
+# Author: Zygmunt Krynicki <zygmunt.krynicki@linaro.org>
+#
+# This file is part of django-testproject.
+#
+# django-testproject is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License version 3
+# as published by the Free Software Foundation
+#
+# django-testproject is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with django-testproject.  If not, see <http://www.gnu.org/licenses/>.
+
 """
 Settings generator for test projects
 """
+
+import inspect
 import os
 import sys
-import inspect
+
 import django
 
 
@@ -79,7 +99,20 @@ def gen_settings(**kwargs):
 
     # Default settings
     settings = _get_default_settings(project_dir)
-    settings.update(kwargs)
+
+    # Merge with user provided defaults
+    for key, value in kwargs.iteritems():
+        if key not in settings:
+            new_value = value
+        elif isinstance(settings[key], (list, tuple)) and isinstance(value, (list, tuple)):
+            # Merge lists
+            new_value = list(settings[key]) + list(value)
+        elif isinstance(settings[key], (int, float, bool, basestring)) and isinstance(value, (int, float, bool, basestring)):
+            # Overwrite simple types
+            new_value = value
+        else:
+            raise ValueError("Don't know how to merge custom setting %r that already exists in generated settings" % key)
+        settings[key] = new_value
 
     # Crude django_coverage integration
     try:

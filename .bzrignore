@@ -1,6 +1,4 @@
 *.egg
 *.egg-info
 build
-coverage_report
-coverage_report_log.txt
 dist
