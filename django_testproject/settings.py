@@ -87,8 +87,10 @@ def gen_settings(**kwargs):
     Generate settings for test project
 
     The settings will work for django 1.1.x and 1.2.x
-    """
 
+    You may provide any additional settings with keyword arguments, they
+    will be merged with generated settings.
+    """
     # Find project_dir by inspecting caller
     frame = inspect.currentframe()
     outer_frames = inspect.getouterframes(frame)
@@ -122,4 +124,6 @@ def gen_settings(**kwargs):
         settings['COVERAGE_MODULE_EXCLUDES'] = []
     except ImportError:
         pass
+
+    # Return settings back to the caller
     return settings
