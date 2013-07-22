@@ -1,0 +1,5 @@
+django-testproject (0.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Neil Williams <codehelp@debian.org>  Mon, 22 Jul 2013 10:38:01 +0100

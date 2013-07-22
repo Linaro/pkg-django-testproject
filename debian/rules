@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_install:
+	dh_auto_install
+	python setup.py install --root=$(CURDIR)/debian/django-testproject/ --install-layout=deb
+
+override_dh_auto_clean:
+	dh_auto_clean
+	$(RM) -r django_testproject.egg-info setup.cfg .idea/
+	$(RM) -r versiontools-*.egg/ doc/_build/
+	[ ! -f doc/Makefile ] || make -C doc/ clean
+
+# get upstream version for get-orig-source target
+VERSION:= $(shell dpkg-parsechangelog | grep '^Version: ' | sed -e 's/^Version: //' | sed -e 's/\-.*$$//')
+
+sdist-orig:
+	python setup.py sdist
+	mv -v dist/django-testproject-$(VERSION).tar.gz ../django-testproject_$(VERSION).orig.tar.gz
+	$(RM) -r versiontools-*.egg/
