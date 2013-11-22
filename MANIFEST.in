@@ -1,2 +1,0 @@
-include COPYING 
-recursive-include django_testproject/templates *.html
