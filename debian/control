@@ -1,15 +1,18 @@
 Source: django-testproject
 Section: net
 Priority: optional
-Maintainer: Neil Williams <codehelp@debian.org>
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Uploaders: Antonio Terceiro <terceiro@debian.org>,
+ Neil Williams <codehelp@debian.org>,
+ Fathi Boudra <fabo@debian.org>, Jordi Mallach <jordi@debian.org>
 Build-Depends: debhelper (>= 8.0.0),
  python | python-all | python-dev | python-all-dev,
  python-versiontools, python-setuptools
 X-Python-Version: 2.7
-Standards-Version: 3.9.4
-Homepage: http://www.linaro.org/engineering/validation
-#Vcs-Git: git://git.debian.org/collab-maint/django-testproject.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/django-testproject.git;a=summary
+Standards-Version: 3.9.5
+Homepage: http://www.linaro.org/engineering/engineering-groups/validation
+Vcs-Git: https://alioth.debian.org/anonscm/git/pkg-linaro-lava/django-testproject.git
+Vcs-Browser: https://alioth.debian.org/plugins/scmgit/cgi-bin/gitweb.cgi?p=pkg-linaro-lava/django-testproject.git;a=summary
 
 Package: django-testproject
 Architecture: all
