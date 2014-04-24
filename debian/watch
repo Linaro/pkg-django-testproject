@@ -1,0 +1,4 @@
+version=3
+
+https://pypi.python.org/packages/source/d/django-testproject/django-testproject-(.*).tar.gz
+
