@@ -1,3 +1,9 @@
+django-testproject (0.1.2-2) unstable; urgency=medium
+
+  * Fix inadvertent typo in debian/copyright to fix on LGPL-3.0
+
+ -- Neil Williams <codehelp@debian.org>  Thu, 08 May 2014 18:26:35 +0100
+
 django-testproject (0.1.2-1) unstable; urgency=medium
 
   * Initial upload. (Closes: #745627: ITP: django-testproject -- Django
