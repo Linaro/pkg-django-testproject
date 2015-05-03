@@ -5,11 +5,11 @@ Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
 Uploaders: Antonio Terceiro <terceiro@debian.org>,
  Neil Williams <codehelp@debian.org>,
  Fathi Boudra <fabo@debian.org>, Jordi Mallach <jordi@debian.org>
-Build-Depends: debhelper (>= 8.0.0),
+Build-Depends: debhelper (>= 8.0.0), dh-python,
  python | python-all | python-dev | python-all-dev,
  python-setuptools
 X-Python-Version: 2.7
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://www.linaro.org/engineering/engineering-groups/validation
 Vcs-Git: https://github.com/Linaro/pkg-django-testproject.git
 Vcs-Browser: https://github.com/Linaro/pkg-django-testproject

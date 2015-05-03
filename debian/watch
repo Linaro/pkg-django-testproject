@@ -1,4 +1,6 @@
 version=3
 
-https://pypi.python.org/packages/source/d/django-testproject/django-testproject-(.*).tar.gz
+# https://pypi.python.org/packages/source/d/django-testproject/django-testproject-(.*).tar.gz
+
+https://git.linaro.org/lava/django-testproject.git/tags /lava/django-testproject.git/log/refs/tags/release-(.*)
 
