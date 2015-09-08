@@ -1,3 +1,9 @@
+django-testproject (0.1.2-4) unstable; urgency=medium
+
+  * Add Senthil Kumaran S (stylesen) as an uploader.
+
+ -- Senthil Kumaran S (stylesen) <stylesen@gmail.com>  Tue, 08 Sep 2015 22:29:20 +0530
+
 django-testproject (0.1.2-3) unstable; urgency=medium
 
   * Add watch file
