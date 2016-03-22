@@ -1,3 +1,9 @@
+django-testproject (0.1.2-5) unstable; urgency=medium
+
+  * Add python3 package
+
+ -- Neil Williams <codehelp@debian.org>  Tue, 22 Mar 2016 10:41:08 +0000
+
 django-testproject (0.1.2-4) unstable; urgency=medium
 
   * Add Senthil Kumaran S (stylesen) as an uploader.
