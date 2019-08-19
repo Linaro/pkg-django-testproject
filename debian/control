@@ -6,7 +6,6 @@ Uploaders: Neil Williams <codehelp@debian.org>,
  Senthil Kumaran S (stylesen) <stylesen@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), dh-python,
  python3-all, python3-setuptools,
-X-Python-Version: >=2.7
 Standards-Version: 4.0.0
 Homepage: http://www.linaro.org/engineering/engineering-groups/validation
 Vcs-Git: https://github.com/Linaro/pkg-django-testproject.git
