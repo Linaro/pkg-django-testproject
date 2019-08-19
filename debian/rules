@@ -10,17 +10,10 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with python3
+	dh $@ --with python3 --buildsystem=pybuild
 
-override_dh_auto_install:
-	dh_auto_install
-	python3 setup.py install --root=$(CURDIR)/debian/python3-django-testproject/ --install-layout=deb
-
-override_dh_auto_clean:
-	dh_auto_clean
-	$(RM) -r django_testproject.egg-info setup.cfg .idea/
-	$(RM) -r versiontools-*.egg/ doc/_build/
-	[ ! -f doc/Makefile ] || make -C doc/ clean
+override_dh_auto_test:
+	:
 
 # get upstream version for get-orig-source target
 VERSION:= $(shell dpkg-parsechangelog | grep '^Version: ' | sed -e 's/^Version: //' | sed -e 's/\-.*$$//')
