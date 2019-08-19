@@ -5,25 +5,12 @@ Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
 Uploaders: Neil Williams <codehelp@debian.org>,
  Senthil Kumaran S (stylesen) <stylesen@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), dh-python,
- python-all, python-setuptools,
  python3-all, python3-setuptools,
 X-Python-Version: >=2.7
 Standards-Version: 4.0.0
 Homepage: http://www.linaro.org/engineering/engineering-groups/validation
 Vcs-Git: https://github.com/Linaro/pkg-django-testproject.git
 Vcs-Browser: https://github.com/Linaro/pkg-django-testproject
-
-Package: django-testproject
-Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}
-Description: Django test project support (Python 2 version)
- This package provides django test project support to
- make it easier to run application unit tests without
- testing other parts of django core.
- .
- Projects can use run_tests to specify which parts of
- the codebase listed in INSTALLED_APPLICATIONS will
- run unit tests.
 
 Package: python3-django-testproject
 Architecture: all
