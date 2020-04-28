@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
 Uploaders: Neil Williams <codehelp@debian.org>,
  Senthil Kumaran S (stylesen) <stylesen@gmail.com>
-Build-Depends: debhelper (>= 12~), dh-python,
+Build-Depends: debhelper-compat (= 12), dh-python,
  python3-all, python3-setuptools,
 Standards-Version: 4.0.0
 Homepage: https://www.linaro.org/engineering/engineering-groups/validation
